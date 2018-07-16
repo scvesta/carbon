@@ -1,0 +1,54 @@
+ID: carbon
+_schema-version: '2.0'
+version: 0.0.1
+
+modules:
+ - name: Carbon_P1-carbon
+   type: siteentry
+   path: Carbon_P1
+   parameters:
+      memory: 64M
+   requires:
+    - name: sap-portal-services-host-carbon
+    - name: portal-uaa-carbon
+    - name: sapui5-provider
+      properties:
+         sapui5url: ~{url}
+
+
+ - name: Carbon_P1-Content-carbon
+   type: sitecontent
+   path: Carbon_P1-Content
+   parameters:
+      memory: 32M
+   requires:
+    - name: sap-portal-services-client-carbon
+    - name: portal-uaa-carbon
+
+resources:
+ - name: sap-portal-services-host-carbon
+   parameters:
+      config:
+         siteId: carbon
+   type: com.sap.portal.site-host
+
+ - name: portal-uaa-carbon
+   parameters:
+      service-plan: space
+   type: com.sap.xs.uaa
+
+
+ - name: sapui5-provider
+   parameters:
+      provider-id: com.sap.ui5.dist.sapui5-dist-xsa.XSAC_UI5_FESV4:sapui5_fesv4
+      version: '>=1.42.0'
+      provider-nid: mta
+   type: configuration
+
+
+ - name: sap-portal-services-client-carbon
+   parameters:
+      config:
+         siteId: carbon
+   type: com.sap.portal.site-content
+
