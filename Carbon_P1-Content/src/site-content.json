@@ -8,11 +8,11 @@
 			"entityType": "site",
 			"description": "",
 			"i18n": "",
-			"title": "Fiori Launchpad Sample"
+			"title": "Carbon Fiori Launchpad Sample"
 		},
 		"payload": {
 			"groupsOrder": [
-				"5acadc20-687e-11e6-8b77-86f30ca893d3"
+				"Monitoring"
 			],
 			"config": {
 
@@ -32,18 +32,21 @@
 			"identification": {
 				"id": "07889260-3021-4ef6-ba85-edd311738f9a",
 				"namespace": "",
-				"title": "{{sample_catalog_title}}",
-				"description": "{{sample_catalog_description}}",
+				"title": "{{c1_catalog_title}}",
+				"description": "{{c1_catalog_description}}",
 				"entityType": "catalog",
 				"i18n": "i18n/i18n.properties"
 			},
 			"payload": {
 				"appDescriptors": [{
 					"namespace": "",
-					"id": "6ef9cdd2-687e-11e6-8b77-86f30ca893d3"
+					"id": "SDI_AGENT"
 				}, {
 					"namespace": "",
-					"id": "73c3f80a-5245-4e6c-a51d-d9436b1cb530"
+					"id": "SDI_REMOTE"
+				}, {
+					"namespace": "",
+					"id": "SDI_TASK"					
 				}]
 			}
 		}
@@ -61,7 +64,7 @@
 
 				],
 				"groups": [{
-					"id": "5acadc20-687e-11e6-8b77-86f30ca893d3"
+					"id": "Monitoring"
 				}]
 			}
 		}
@@ -70,33 +73,42 @@
 
 	},
 	"groups": {
-		"5acadc20-687e-11e6-8b77-86f30ca893d3": {
+		"Monitoring": {
 			"identification": {
-				"id": "5acadc20-687e-11e6-8b77-86f30ca893d3",
+				"id": "Monitoring",
 				"i18n": "i18n/i18n.properties",
 				"namespace": "",
-				"title": "{{group_title}}"
+				"title": "{{g1_title}}"
 			},
 			"payload": {
 				"tiles": [{
-					"id": "mySapTile",
-					"title": "{{sap_app_title}}",
-					"subTitle": "{{sap_app_sub_title}}",
+					"id": "dpAgentTile",
+					"title": "{{t1_app_title}}",
 					"icon": "sap-icon://world",
 					"target": {
-						"semanticObject": "Sap",
+						"semanticObject": "dpAgent",
 						"action": "show",
 						"parameters": [
 
 						]
 					}
 				}, {
-					"id": "myUi5Tile",
-					"title": "{{sample_pers_app_title}}",
-					"subTitle": "{{sample_pers_app_sub_title}}",
+					"id": "dpRemoteTile",
+					"title": "{{t2_app_title}}",
 					"icon": "sap-icon://person-placeholder",
 					"target": {
-						"semanticObject": "app",
+						"semanticObject": "dpRemote",
+						"action": "show",
+						"parameters": [
+
+						]
+					}
+				}, {
+					"id": "dpTaskTile",
+					"title": "{{t3_app_title}}",
+					"icon": "sap-icon://person-placeholder",
+					"target": {
+						"semanticObject": "dpTask",
 						"action": "show",
 						"parameters": [
 

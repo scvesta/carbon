@@ -1,0 +1,33 @@
+{
+	"sap.app": {
+		"_version": "1.3.0",
+		"id": "SDI_AGENT",
+		"i18n": "i18n/i18n.properties",
+		"title": "{{title}}",
+		"tags": {
+			"keywords": [
+
+			]
+		},
+		"crossNavigation": {
+			"inbounds": {
+				"SapShow": {
+					"semanticObject": "dpAgent",
+					"action": "show",
+					"deviceTypes": {
+						"desktop": true,
+						"tablet": true,
+						"phone": true
+					}
+				}
+			}
+		}
+	},
+	"sap.platform.cf": {
+		"uri": "http://appsrv20.vesta.rizing.com:8000/sap/hana/im/dp/monitor/index.html?view=DPAgentMonitor"
+	},
+	"sap.ui": {
+		"_version": "1.3.0",
+		"technology": "URL"
+	}
+}
