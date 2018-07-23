@@ -27,10 +27,10 @@
 		}
 	},
 	"catalogs": {
-		"07889260-3021-4ef6-ba85-edd311738f9a": {
+		"cMonitor": {
 			"_version": "1.1",
 			"identification": {
-				"id": "07889260-3021-4ef6-ba85-edd311738f9a",
+				"id": "cMonitor",
 				"namespace": "",
 				"title": "{{c1_catalog_title}}",
 				"description": "{{c1_catalog_description}}",
@@ -49,7 +49,24 @@
 					"id": "SDI_TASK"					
 				}]
 			}
-		}
+		},
+		"cTable": {
+			"_version": "1.1",
+			"identification": {
+				"id": "cTable",
+				"namespace": "",
+				"title": "{{c2_catalog_title}}",
+				"description": "{{c2_catalog_description}}",
+				"entityType": "catalog",
+				"i18n": "i18n/i18n.properties"
+			},
+			"payload": {
+				"appDescriptors": [{
+					"namespace": "",
+					"id": "CONFIG_TABLE"
+				}]
+			}
+		}	
 	},
 	"roles": {
 		"Everyone": {
@@ -65,6 +82,8 @@
 				],
 				"groups": [{
 					"id": "Monitoring"
+				}, {
+					"id": "Configuration Table"
 				}]
 			}
 		}
@@ -116,7 +135,29 @@
 					}
 				}]
 			}
-		}
+		},
+		"Configuration Table": {
+			"identification": {
+				"id": "Configuration Table",
+				"i18n": "i18n/i18n.properties",
+				"namespace": "",
+				"title": "{{g2_title}}"
+			},
+			"payload": {
+				"tiles": [{
+					"id": "CONFIG_TABLE",
+					"title": "{{t4_app_title}}",
+					"icon": "sap-icon://world",
+					"target": {
+						"semanticObject": "configTable",
+						"action": "show",
+						"parameters": [
+
+						]
+					}
+				}]
+			}
+		}		
 	},
 	"siteThemes": {
 		"sap_hcb": {
