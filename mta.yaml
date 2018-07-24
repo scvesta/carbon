@@ -16,14 +16,7 @@ modules:
          sapui5url: ~{url}
 
 
- - name: Carbon_P1-Content-carbon
-   type: sitecontent
-   path: Carbon_P1-Content
-   parameters:
-      memory: 32M
-   requires:
-    - name: sap-portal-services-client-carbon
-    - name: portal-uaa-carbon
+ 
 
 resources:
  - name: sap-portal-services-host-carbon
