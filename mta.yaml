@@ -1,22 +1,13 @@
-ID: carbon
+ID: com.vesta.carbon.core
 _schema-version: '2.0'
 version: 0.0.1
 
 modules:
- - name: Carbon_P1-carbon
-   type: siteentry
-   path: Carbon_P1
-   parameters:
-      memory: 64M
+ - name: coredb
+   type: hdb
+   path: core-db
    requires:
-    - name: sap-portal-services-host-carbon
-    - name: portal-uaa-carbon
-    - name: sapui5-provider
-      properties:
-         sapui5url: ~{url}
-
-
- 
+    - name: hdi_coredb
 
 resources:
  - name: sap-portal-services-host-carbon
@@ -44,4 +35,13 @@ resources:
       config:
          siteId: carbon
    type: com.sap.portal.site-content
+
+
+ - name: hdi_coredb
+   parameters:
+      config:
+         schema: myFirstDB
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
 
